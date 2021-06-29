@@ -1,5 +1,5 @@
 # 4-Card-Feature-Layout
-4th Project from Frontend Mentor
+5th Project from Frontend Mentor
 
 Used a mobile first approach to increase responsiveness.
 
