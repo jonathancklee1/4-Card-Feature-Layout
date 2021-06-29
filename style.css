@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+/* Typography */
+.title,
+.subtitle {
+  font-size: 0.8rem;
+}
+
+.title h1 {
+  font-weight: 200;
+}
+
+.title span,
+.grid-box h3 {
+  color: hsl(234, 12%, 34%);
+}
+
+.title span {
+  display: block;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-weight: 200;
+}
+.grid-box {
+  font-size: 0.8rem;
+}
+.grid-box h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.grid-box p {
+  font-weight: 200;
+}
+
+/* Layout */
+
+.container {
+  padding: 2em;
+}
+
+.title,
+.subtitle {
+  text-align: center;
+  margin: auto;
+  max-width: 30em;
+}
+.title h1 {
+  margin-bottom: 1em;
+}
+.subtitle p {
+  margin-bottom: 4em;
+}
+.grid-container {
+  display: grid;
+  row-gap: 3em;
+
+  justify-content: center;
+}
+.grid-box {
+  background-color: white;
+  box-shadow: 1px 21px 25px 0px hsl(229, 6%, 80%);
+  -webkit-box-shadow: 1px 21px 25px 0px hsl(229, 6%, 80%);
+  -moz-box-shadow: 1px 21px 25px 0px hsl(229, 6%, 80%);
+  padding: 1.5rem;
+  position: relative;
+  max-width: 24em;
+  border-radius: 10px;
+}
+
+.grid-box h3 {
+  margin-bottom: 0.5em;
+}
+.grid-box p {
+  margin-bottom: 2em;
+}
+
+.box1 {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+.box2 {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+.box3 {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+.box4 {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.image-div {
+  text-align: right;
+}
+.image-div img {
+  width: 4.5em;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) {
+  /* Creating Grid layout */
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . Area-1 Area-1 . ."
+      "Area-2 Area-2 Area-1 Area-1 Area-4 Area-4"
+      "Area-2 Area-2 Area-3 Area-3 Area-4 Area-4"
+      ". . Area-3 Area-3 . .";
+    column-gap: 2em;
+    row-gap: 2em;
+    max-width: 69em;
+    margin: auto;
+  }
+
+  /* Assigning divs to grid location */
+  .box2 {
+    grid-area: Area-1;
+  }
+  .box1 {
+    grid-area: Area-2;
+  }
+  .box3 {
+    grid-area: Area-3;
+  }
+  .box4 {
+    grid-area: Area-4;
+  }
+}
