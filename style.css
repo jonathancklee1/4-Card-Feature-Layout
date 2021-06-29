@@ -145,4 +145,8 @@ body {
   .box4 {
     grid-area: Area-4;
   }
+  .title,
+  .subtitle {
+    font-size: 1.1rem;
+  }
 }
